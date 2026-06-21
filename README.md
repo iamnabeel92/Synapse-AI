@@ -235,39 +235,3 @@ SOFTWARE.
 8. GitHub Publication & Installation Guide
 
 To organize and deploy these files as a complete GitHub repository, initialize the codebase locally using these instructions.
-
-8.1 Create the Repository Structure
-
-Generate your project workspace and save the source code:
-
-# Create a new local workspace directory
-mkdir synapse-lang
-cd synapse-lang
-
-# Save this specification file as your master README
-mv /path/to/downloaded/synapse_spec.md README.md
-
-
-8.2 Initialize Git & Push to GitHub
-
-If you don't have a GitHub repository created yet, these instructions will automatically create a remote repository and publish your code directly from your terminal using the GitHub CLI (gh):
-
-# Initialize git in the workspace
-git init
-
-# Add the spec and runtime scripts
-git add README.md
-git add synapse_runtime.py
-
-# Create your first local commit
-git commit -m "feat: initial commit of Synapse Specification v2.0 and Python runtime interpreter"
-
-# Verify you are logged into your GitHub Account
-# (If not, run 'gh auth login' first)
-gh auth status
-
-# Create a brand new public repository on your GitHub account
-# This automatically handles remote configuration and repository instantiation
-gh repo create synapse-lang --public --source=. --remote=origin --push
-
-echo "Successfully published Synapse Language repository to your GitHub account!"
